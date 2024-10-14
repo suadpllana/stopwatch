@@ -1,7 +1,25 @@
 body{
+  margin: 0;
+  overflow: hidden;
+ 
+}
+.container{
+  height: 80vh;
+  padding-top: 150px;
+  margin: 0;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   background-color: cadetblue;
+  transition: background-color 1s ease;
+}
+.black-container{
+  height: 80vh;
+  padding-top: 150px;
+  margin: 0;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  transition: background-color 1s ease;
 }
 h1{
   margin-top: 2rem
@@ -19,15 +37,30 @@ button{
 }
 .reset {
   background-color: darkblue;
+  transition: background-color 1s ease;
 
+}
+.reset-black{
+  background-color: rgb(6, 6, 58);
+  transition: background-color 1s ease;
 }
 .stop {
   background-color: rgb(201, 22, 22);
+  transition: background-color 1s ease;
 
+}
+.stop-black{
+  background-color: rgb(95, 8, 8);
+  transition: background-color 1s ease;
 }
 .start {
   background-color: rgb(26, 163, 26);
+  transition: background-color 1s ease;
 
+}
+.start-black{
+  background-color: rgb(10, 74, 10);
+  transition: background-color 1s ease;
 }
 .clockContainer{
   width: 40%;
@@ -37,7 +70,42 @@ button{
   background-color: white;
   margin-top: 5rem;
   text-align: center;
+  transition: background-color 1s ease;
 }
+.blackClockContainer{
+  width: 40%;
+  margin-left: 30%;
+  border: 5px solid black;
+  border-radius: 100px;
+  background-color: darkblue;
+  margin-top: 5rem;
+  text-align: center;
+  color: white;
+  transition: background-color 1s ease;
+}
+.container{
+  position: relative;
+}
+.toggle-mode{
+  position: absolute;
+  right: 0;
+  top: 20px;
+  background-color: black;
+  color: white;
+  transition: background-color 1s ease;
+}
+.light-mode {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  background-color: white;
+  color: black;
+  transition: background-color 1s ease;
+}
+.toggle-mode:hover{
+  opacity: 0.7;
+}
+
 @media (max-width: 767px){
   .clockContainer{
     width: 100%;

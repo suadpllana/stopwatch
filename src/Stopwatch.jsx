@@ -6,6 +6,7 @@ const Stopwatch = () => {
   const timerRef = useRef(null); 
   const startTimeRef = useRef(null); 
   const elapsedTimeRef = useRef(0); 
+  const [darkmode , setDarkMode] = useState(false)
 
   const formatTime = (timeInMs) => {
     let milliseconds = Math.floor((timeInMs % 1000) / 10);
@@ -46,15 +47,20 @@ const Stopwatch = () => {
     elapsedTimeRef.current = 0;
   }
 
+
+  function toggleMode(){
+    setDarkMode(prev => !prev)
+  }
+
   return (
-    <div>
-       
-        <div className="clockContainer">
+    <div className={darkmode ? "black-container" : "container" }>
+       <button className={darkmode ? "light-mode" : "toggle-mode"} onClick={toggleMode}>{darkmode ?  "Light Mode" : "Dark mode"}</button>
+        <div className={darkmode ? "blackClockContainer" : "clockContainer" }>
         <h1>Stopwatch</h1>
         <h1>{clock}</h1>
-      <button className="stop" onClick={stopTimer}>Stop</button>
-      <button className="reset" onClick={resetTimer}>Reset</button>
-      <button className="start" onClick={startTimer}>Start</button>
+      <button className={darkmode ? "stop-black" : "stop" } onClick={stopTimer}>Stop</button>
+      <button className={darkmode ? "reset-black" : "reset" } onClick={resetTimer}>Reset</button>
+      <button className={darkmode ? "start-black" : "start" } onClick={startTimer}>Start</button>
         </div>
      
     </div>
