@@ -109,14 +109,14 @@ button{
 }
 
 @media (max-width: 767px){
-  .clockContainer{
+  .clockContainer , .blackClockContainer{
     width: 100%;
     margin-left: 0;
     border-radius: 40px;
   }
 }
 @media (min-width: 768px) and (max-width: 1217px){
-  .clockContainer{
+  .clockContainer,.blackClockContainer{
     width: 60%;
     margin-left: 20%;
   }
